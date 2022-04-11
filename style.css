@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #2B2B2B;
+}
+:root {
+    --border: 15px solid #F14100;
+}
+.big{
+   width: 100vw;
+   height: 100vh;   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.main {
+   width: 50%;
+   margin: 0 auto;
+   border: var(--border);
+   position: relative;
+   border-radius: 50%;
+   background: #333333;
+   transform: rotate(-200deg);
+   overflow:hidden;
+   }
+.main:after{
+    content: '';
+    padding-bottom: 100%;
+    display: block;
+}
+.main> div {
+   width: 40%;
+   height: 40%;
+   position: absolute;
+   border: var(--border);
+   border-radius: 100% 0;
+   background: #333333;
+   }
+.main>:nth-child(1){
+   left: 11%;
+   top: 11%;
+   border-radius: 0 100%;
+   }
+.main> :nth-child(2){
+   right: 11%;
+   top: 11%;
+   }
+.main> :nth-child(3){
+bottom: 11%;
+left: 11%;
+}
+.main> :nth-child(4){
+right: 11%;
+bottom: 11%;
+border-radius: 0 100%;
+}
+
+/*for responsive USE SASS*/
+
+/*for Tablets */
+@media screen and (max-width:768px) {
+   .main{
+     background:#57382d;}
+   .main> div{
+           background: #44291f; 
+           
+            } 
+  }
+  /*for mobile*/
+ @media screen and (max-width:480px) {
+    .main{
+      border:10px solid #F14100;
+      background:#e6754d;}
+    .main> div{
+            background: #a86d58; 
+            border:10px solid #F14100;
+             } 
+   }
+
+/* for Large resolution desktop, TVs*/
+   @media screen and (min-width: 1382px){
+      .main{
+         border:18px solid #F14100;
+         background:#e6754d;
+      }
+      .main>div{
+         border:18px solid #F14100;
+         background: #a86d58; 
+      }
+   }
+   
+
+   
+  
+  
+  
+
+
+ 
+
+
